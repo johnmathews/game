@@ -1,0 +1,45 @@
+[gd_scene load_steps=5 format=3]
+
+[ext_resource type="Script" path="res://scripts/platformer/platformer_level.gd" id="1_script"]
+[ext_resource type="Script" path="res://scripts/platformer/platformer_player.gd" id="2_player_script"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_player"]
+size = Vector2(24, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_goal"]
+size = Vector2(48, 48)
+
+[node name="PlatformerLevel" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+
+[node name="PlatformerPlayer" type="CharacterBody2D" parent="."]
+position = Vector2(100, 500)
+script = ExtResource("2_player_script")
+
+[node name="Sprite" type="ColorRect" parent="PlatformerPlayer"]
+offset_left = -12.0
+offset_top = -16.0
+offset_right = 12.0
+offset_bottom = 16.0
+color = Color(0.2, 0.7, 0.3, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlatformerPlayer"]
+shape = SubResource("RectangleShape2D_player")
+
+[node name="Goal" type="Area2D" parent="."]
+position = Vector2(1100, 500)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Goal"]
+shape = SubResource("RectangleShape2D_goal")
+
+[node name="GoalMarker" type="ColorRect" parent="Goal"]
+offset_left = -24.0
+offset_top = -24.0
+offset_right = 24.0
+offset_bottom = 24.0
+color = Color(1, 0.84, 0, 0.7)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(640, 360)

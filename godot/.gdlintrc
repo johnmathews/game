@@ -1,0 +1,15 @@
+class-definitions-order = [
+    "signals",
+    "enums",
+    "constants",
+    "exported-variables",
+    "public-variables",
+    "private-variables",
+    "onready-variables",
+    "optional-built-in-virtuals",
+    "rest-of-methods",
+    "static-methods",
+]
+
+max-line-length = 120
+tab-characters = "tab"

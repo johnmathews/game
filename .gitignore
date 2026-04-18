@@ -1,0 +1,17 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+*.egg-info/
+.env
+game.db
+htmlcov/
+.coverage
+
+# Godot
+.godot/
+export/
+
+# General
+.DS_Store
+*.log

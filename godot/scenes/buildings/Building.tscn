@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/village/building.gd" id="1_script"]
+
+[node name="Building" type="Node2D"]
+script = ExtResource("1_script")
+
+[node name="BackgroundRect" type="ColorRect" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+color = Color(0.15, 0.15, 0.2, 1)
+
+[node name="BuildingLabel" type="Label" parent="BackgroundRect"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 40.0
+offset_right = 740.0
+offset_bottom = 80.0
+text = "Building"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ButtonContainer" type="VBoxContainer" parent="BackgroundRect"]
+layout_mode = 0
+offset_left = 490.0
+offset_top = 300.0
+offset_right = 790.0
+offset_bottom = 420.0
+theme_override_constants/separation = 20
+
+[node name="ChallengeButton" type="Button" parent="BackgroundRect/ButtonContainer"]
+layout_mode = 2
+text = "Start Challenge"
+
+[node name="BackButton" type="Button" parent="BackgroundRect/ButtonContainer"]
+layout_mode = 2
+text = "Back to Village"
