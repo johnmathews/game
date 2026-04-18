@@ -40,7 +40,7 @@ This requires the HTML5 export template to be installed. Install it via the edit
 
 ```bash
 cd backend
-uv sync --extra dev
+uv sync
 ```
 
 This installs all runtime and development dependencies (FastAPI, SQLAlchemy, pytest, coverage, etc.) into a virtual environment managed by `uv`.

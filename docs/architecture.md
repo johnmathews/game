@@ -51,6 +51,7 @@ godot/
       player.gd              # Player character movement and interaction
     village/
       village.gd             # Village scene logic
+      village_generator.gd   # @tool script to procedurally generate Spaarndam village layout
       building.gd            # Building interaction zones
     platformer/
       platformer_level.gd    # Platformer level logic
@@ -58,9 +59,18 @@ godot/
     ui/
       main_menu.gd           # Login/register UI logic
   assets/
-    (sprites, tilesets, audio)
+    isometric/
+      ground_tileset.png       # Gridded spritesheet: roads, water, trees (10x14, 100x65px cells)
+      buildings_tileset.png    # Gridded spritesheet: buildings (10x13, 133x130px cells)
+      buildings/               # Kenney isometric buildings (CC0)
+      roads/                   # Kenney isometric roads (CC0)
+      water/                   # Kenney isometric water/bridges (CC0)
+      library/                 # Kenney isometric miniature props (CC0)
+    platformer/
+      tiles/                   # Kenney pixel platformer (CC0, 18x18px)
+      characters/              # Kenney platformer characters (CC0)
   tests/
-    (GUT test scripts)
+    test_game_manager.gd       # GUT tests for GameManager autoload
 ```
 
 ### Autoloads
