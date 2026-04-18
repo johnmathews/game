@@ -1,4 +1,8 @@
-.PHONY: lint-python lint-python-fix lint-gdscript lint test-backend test-godot test coverage coverage-html
+.PHONY: setup lint-python lint-python-fix lint-gdscript lint test-backend test-godot test coverage coverage-html
+
+setup:
+	git config core.hooksPath .githooks
+	cd backend && uv sync
 
 lint-python:
 	cd backend && uv run ruff check .
