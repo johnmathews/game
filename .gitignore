@@ -12,6 +12,9 @@ htmlcov/
 .godot/
 export/
 
+# Claude Code
+.claude/settings.local.json
+
 # General
 .DS_Store
 *.log

@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Pre-commit: Linting Python ==="
+cd backend
+uv run ruff check .
+cd ..
+
+echo "=== Pre-commit: All checks passed ==="

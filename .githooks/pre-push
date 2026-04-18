@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+set -e
+
+echo "=== Pre-push: Running Python tests ==="
+cd backend
+uv run pytest -v
+cd ..
+
+echo "=== Pre-push: All tests passed ==="
