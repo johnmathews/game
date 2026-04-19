@@ -46,7 +46,7 @@ This state is saved to the backend and persists across sessions and devices.
 
 ### Isometric Village Hub
 
-The main gameplay scene. Top-down isometric view of Spaarndam village.
+The main gameplay scene. Top-down isometric view of Spaarndam village. The village layout was hand-painted by Vienna using Kenney isometric tilesets (roads, grass, water, buildings) in the Godot editor.
 
 - Player character moves in 8 directions on the isometric grid.
 - Buildings have interaction zones near their entrances.
